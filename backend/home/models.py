@@ -24,6 +24,7 @@ class CustomText(models.Model):
 
 class HomePage(models.Model):
     body = models.TextField()
+    password = models.TextField(null=True, blank=True,)
 
     @property
     def api(self):
@@ -32,3 +33,8 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class HomePageTesting(models.Model):
+    "Generated Model"
+    login = models.EmailField(max_length=254,)
